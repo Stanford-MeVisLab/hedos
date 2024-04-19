@@ -1,5 +1,6 @@
-<img src="figures/logo.png">
-HEDOS : Hematological Dose
+# HEDOS : Hematological Dose
+
+![Hedos Logo](figures/logo.png)
 
 ## Installation
 
@@ -17,6 +18,20 @@ Install hedos
 $ pip3 install .
 ```
 
+Verify that hedos is installed as a package
+
+```bash
+$ pip3 list
+```
+
+Run the example program
+
+```bash
+$ cd examples
+
+$ python BloodDose.py
+```
+
 ## Background
 
 Blood flow is stochastically modeled and superimposed with a - potentially time varying - dose rate to calculate the
@@ -28,7 +43,7 @@ are:
 - The new code is orders of magnitude faster thanks to vectorization.
 - We have corrected a mathematical inaccuracy in the way transition probabilities between compartments were computed.
 
-#
+---
 
 For blood dose calculations, the configuration parameters (patient, treatment and simulation parameters) are set up in
 `BloodDose`. It then calls one of two possible workflows:
@@ -40,7 +55,7 @@ For blood dose calculations, the configuration parameters (patient, treatment an
 - `BloodDoseFromDVHs` does the same thing, but uses DVHs of each of the organs contributing to the overall blood
   dose.
 
-#
+---
 
 The calculation of blood dose follows these steps in succession:
 
@@ -52,7 +67,7 @@ The calculation of blood dose follows these steps in succession:
 
 Their relationship looks like following image:
 
-<img src="figures/hedos_overview.png">
+![Hedos Overview](figures/hedos_overview.png)
 
 ### Example
 
@@ -62,8 +77,8 @@ gantry motion. Bottom panel: Treatment given in a single beam of 10s. It is clea
 dramatically affects the blood dose distribution (but not the mean blood dose). Non-zero contributions to the blood dose
 from various anatomical structures are also indicated.
 
-<img src="figures/normal_dose_rate.png">
-<img src="figures/high_dose_rate.png">
+![Normal Dose Rate](figures/normal_dose_rate.png)
+![High Dose Rate](figures/high_dose_rate.png)
 
 ## Team
 
