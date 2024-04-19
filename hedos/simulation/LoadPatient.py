@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.ndimage import gaussian_filter, binary_dilation
 
-from PlotDoseDistribution import plot_volumes
+from hedos.plot import plot_volumes
 
 
 def vol_to_gridpoints(vol, affine):

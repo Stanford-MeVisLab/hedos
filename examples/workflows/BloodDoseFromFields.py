@@ -1,5 +1,5 @@
-from simulation import ExpandFlowModel, TemporalDistribution, DoseRate, CompartmentDose, Patient
-from PlotDoseDistribution import plot_dose_distribution
+from hedos.simulation import ExpandFlowModel, TemporalDistribution, DoseRate, CompartmentDose, Patient
+from hedos.plot import plot_dose_distribution
 
 
 def blood_dose_distribution(simulation_params, patient_params, treatment_params):

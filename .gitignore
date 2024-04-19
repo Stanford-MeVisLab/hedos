@@ -20,3 +20,6 @@ input/patient/dose.npy
 
 # Ignore idea stuff
 .idea/
+
+build/
+*.egg-info/
